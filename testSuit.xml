@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Trade Finance Test Suite">
+    <listeners>
+        <listener class-name="Resources.Listeners"/>
+    </listeners>
+    <!--    <test verbose="1" preserve-order="true" name="Retail Operations Inputter">-->
+    <!--        <groups>-->
+    <!--            <run>-->
+    <!--                <include name="InputterTDR"/>-->
+    <!--            </run>-->
+    <!--        </groups>-->
+
+    <!--        <classes>-->
+    <!--            <class name="Test.Scripts.Conventional.TDR.FloatingRateTermDepositsLCY">-->
+    <!--            <methods>-->
+    <!--                <include name="FloatingRateTermDepositsLCY"/>-->
+    <!--            </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <test verbose="1" preserve-order="true" name="Trade Finance Inputter">
+        <groups>
+            <run>
+                <include name="ImportInputter"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="Test.Scripts.Conventional.Import.Import_LC">
+                <methods>
+                    <include name="ImportUsanceLC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
